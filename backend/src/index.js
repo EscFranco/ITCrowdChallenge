@@ -8,7 +8,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(cors())
 
 // // Servir el directorio con el front buildeado
-// app.use(express.static("build"));
+app.use(express.static("build"));
 
 
 // -----------------  DBCONFIG --------------------- //
@@ -71,9 +71,9 @@ app.delete('/productos/:id', async function (req, res) {
 // // Keep our client side routing functional.
 // // This code essentially serves the index.html file on any unknown routes.
 // // Otherwise we would need to rewrite our entire routing to work with this Express server setup.
-// app.get("/*", (req, res) => {
-//     res.sendFile(path.resolve('build', 'index.html'));
-// });
+app.get("/*", (req, res) => {
+    res.sendFile(path.resolve('build', 'index.html'));
+});
 
 // -----------------  SERVER  --------------------- //
 
