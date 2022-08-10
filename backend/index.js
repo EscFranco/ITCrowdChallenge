@@ -13,8 +13,8 @@ app.use(express.static("build"));
 
 // -----------------  DBCONFIG --------------------- //
 
-import sqlLITE3 from './config.js'
-import accessDB from './contenedor/containerDB.js'
+import sqlLITE3 from './src/config.js'
+import accessDB from './src/contenedor/containerDB.js'
 
 let api = new accessDB(sqlLITE3.config, sqlLITE3.table)
 
