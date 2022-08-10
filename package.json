@@ -1,12 +1,9 @@
 {
-  "type": "module",
   "name": "api-productos",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start" : "cd backend && node src/index.js"
+    "start" : "cd backend && npm start"
   },
   "author": "",
   "license": "ISC"
