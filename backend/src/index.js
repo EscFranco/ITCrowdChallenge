@@ -77,7 +77,7 @@ app.get("/*", (req, res) => {
 
 // -----------------  SERVER  --------------------- //
 
-const PORT = 8080 || process.env.port
+const PORT = 3000 || process.env.port
 const server = app.listen(PORT, () => {
     console.log(`Servidor http escuchando en el puerto ${server.address().port}`)
 })
