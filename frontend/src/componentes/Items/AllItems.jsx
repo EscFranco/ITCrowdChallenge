@@ -10,7 +10,7 @@ const AllItems = () => {
 
     useEffect(() => {
         if (categoryName === undefined) {
-            fetch("http://localhost:8080/productos", {
+            fetch("https://challengeitcrowd.herokuapp.com/productos", {
                 method: "GET"
             })
                 .then((res) => res.json())
@@ -19,7 +19,7 @@ const AllItems = () => {
                     setProductos(list)
                 })
         } else {
-            fetch(`http://localhost:8080/productos?categoria=${categoryName.replace(/-/g, " ")}`, {
+            fetch(`https://challengeitcrowd.herokuapp.com/productos?categoria=${categoryName.replace(/-/g, " ")}`, {
                 method: "GET"
             })
                 .then((res) => res.json())

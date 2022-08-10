@@ -9,7 +9,7 @@ const ItemDetail = () => {
     let navigate = useNavigate()
 
     useEffect(() => {
-        fetch(`http://localhost:8080/productos/${id}`, {
+        fetch(`https://challengeitcrowd.herokuapp.com/productos/${id}`, {
             method: "GET"
         })
             .then(async (res) => {

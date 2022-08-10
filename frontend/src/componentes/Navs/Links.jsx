@@ -12,7 +12,7 @@ const Links = () => {
     }, []);
 
     const getCategories = () => {
-        fetch("http://localhost:8080/productos", {
+        fetch("https://challengeitcrowd.herokuapp.com/productos", {
             method: "GET"
         })
             .then((res) => res.json())

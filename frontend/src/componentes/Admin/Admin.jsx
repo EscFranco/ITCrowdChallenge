@@ -11,7 +11,7 @@ const Admin = () => {
     }, []);
 
     const getItems = () => {
-        fetch("http://localhost:8080/productos", {
+        fetch("https://challengeitcrowd.herokuapp.com/productos", {
             method: "GET"
         })
             .then((res) => res.json())
@@ -30,7 +30,7 @@ const Admin = () => {
             type: event.target.category.value,
         }
 
-        fetch("http://localhost:8080/productos", {
+        fetch("https://challengeitcrowd.herokuapp.com/productos", {
             method: "POST",
             body: JSON.stringify(producto),
             headers: {
@@ -52,7 +52,7 @@ const Admin = () => {
             price: event.target.price.value,
         }
 
-        fetch("http://localhost:8080/productos", {
+        fetch("https://challengeitcrowd.herokuapp.com/productos", {
             method: "PUT",
             body: JSON.stringify(items),
             headers: {
@@ -67,7 +67,7 @@ const Admin = () => {
 
     const deleteProduct = (id) => {
 
-        fetch(`http://localhost:8080/productos/${id}`,
+        fetch(`https://challengeitcrowd.herokuapp.com/productos/${id}`,
         {
             method: "DELETE",
             headers: {
