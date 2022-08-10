@@ -1,7 +1,7 @@
 // -----------------  EXPRESS --------------------- //
-import path from 'path'
-import express from 'express'
-import cors from 'cors'
+const path = require('path')
+const express = require('express')
+const cors = require('cors')
 const app = express()
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
@@ -13,8 +13,8 @@ app.use(express.static("build"));
 
 // -----------------  DBCONFIG --------------------- //
 
-import sqlLITE3 from './src/config.js'
-import accessDB from './src/contenedor/containerDB.js'
+const  {sqlLITE3} = require('./src/config.js')
+const {accessDB}  = require('./src/contenedor/containerDB.js') 
 
 let api = new accessDB(sqlLITE3.config, sqlLITE3.table)
 
