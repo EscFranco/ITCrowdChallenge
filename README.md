@@ -20,6 +20,7 @@
 
 - Users can select to display products in a single category
 - Users can click on any product to get more information
+- /admin you can Add, Edit or delete the products that the database provides
 
 
 ## Getting Started
